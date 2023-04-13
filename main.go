@@ -8,11 +8,12 @@ import (
 )
 
 func main() {
+
 	var usersNum = 15
 	rule1 := rules.New("Fizz", 3)
 	rule2 := rules.New("Buzz", 5)
 
-	rules := []rules.DividedRule{*rule1, *rule2}
+	rules := []fizzbuzz.Rule{rule1, rule2}
 
 	fizzBuzz := fizzbuzz.New(rules)
 

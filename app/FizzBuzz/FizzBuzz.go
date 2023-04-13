@@ -2,15 +2,17 @@ package fizzbuzz
 
 import (
 	"strconv"
-
-	ruleBase "github.com/YakovAkk/FizzBuzz/app/rules"
 )
 
-type FizzBuzz struct {
-	Rules []ruleBase.DividedRule
+type Rule interface {
+	Apply(n int) string
 }
 
-func New(rules []ruleBase.DividedRule) *FizzBuzz {
+type FizzBuzz struct {
+	Rules []Rule
+}
+
+func New(rules []Rule) *FizzBuzz {
 	return &FizzBuzz{Rules: rules}
 }
 
