@@ -1,4 +1,4 @@
-package dividedrules
+package rules
 
 type DividedRule struct {
 	Word   string
