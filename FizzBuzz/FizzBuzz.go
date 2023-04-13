@@ -1,6 +1,8 @@
 package fizzbuzz
 
 import (
+	"strconv"
+
 	"github.com/YakovAkk/FizzBuzz/rules"
 )
 
@@ -12,7 +14,7 @@ func New(rules []rules.Rule) *FizzBuzz {
 	return &FizzBuzz{Rules: rules}
 }
 
-func (this *FizzBuzz) Apply(n int) string {
+func (this FizzBuzz) Apply(n int) string {
 	var result string = ""
 
 	for i := 0; i < len(this.Rules); i++ {
@@ -20,7 +22,7 @@ func (this *FizzBuzz) Apply(n int) string {
 	}
 
 	if result == "" {
-		return string(rune(n))
+		return strconv.FormatInt(int64(n), 10)
 	}
 
 	return result

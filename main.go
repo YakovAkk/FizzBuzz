@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/YakovAkk/FizzBuzz/fizzbuzz"
+	fizzbuzz "github.com/YakovAkk/FizzBuzz/FizzBuzz"
 	"github.com/YakovAkk/FizzBuzz/rules"
 )
 
 func main() {
-	var usersNum = 10
+	var usersNum = 15
 
 	rule1 := rules.New("Fizz", 3)
 	rule2 := rules.New("Buzz", 5)
@@ -18,6 +18,6 @@ func main() {
 	fizzBuzz := fizzbuzz.New(rules)
 
 	for i := 1; i <= usersNum; i++ {
-		fmt.Print(fizzBuzz.Apply())
+		fmt.Print(fizzBuzz.Apply(i) + " ")
 	}
 }
