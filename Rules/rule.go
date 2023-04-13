@@ -9,7 +9,7 @@ func (this Rule) Apply(n int) string {
 	if n%this.Number == 0 {
 		return this.Word
 	}
-	return string(rune(n))
+	return ""
 }
 
 func New(word string, num int) *Rule {
