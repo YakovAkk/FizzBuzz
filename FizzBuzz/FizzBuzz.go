@@ -8,10 +8,11 @@ type FizzBuzz struct {
 	Rules []rules.Rule
 }
 
-func New() *FizzBuzz {
-	return &FizzBuzz{}
+func New(rules []rules.Rule) *FizzBuzz {
+	return &FizzBuzz{Rules: rules}
 }
-func (this FizzBuzz) apply(n int) string {
+
+func (this *FizzBuzz) Apply(n int) string {
 	var result string = ""
 
 	for i := 0; i < len(this.Rules); i++ {

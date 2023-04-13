@@ -10,12 +10,14 @@ import (
 func main() {
 	var usersNum = 10
 
-	rule1 := rules.Rule{Word: "Fizz", Number: 3}
-	rule2 := rules.Rule{Word: "Buzz", Number: 5}
+	rule1 := rules.New("Fizz", 3)
+	rule2 := rules.New("Buzz", 5)
 
-	fizzBuzz := fizzbuzz.FizzBuzz{Rules: []rules.Rule{rule1, rule2}}
+	rules := []rules.Rule{*rule1, *rule2}
+
+	fizzBuzz := fizzbuzz.New(rules)
 
 	for i := 1; i <= usersNum; i++ {
-		fmt.Print(fizzBuzz.apply(i))
+		fmt.Print(fizzBuzz.Apply())
 	}
 }

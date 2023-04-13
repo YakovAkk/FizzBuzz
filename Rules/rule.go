@@ -5,7 +5,7 @@ type Rule struct {
 	Number int
 }
 
-func (this Rule) Apply(n int) string {
+func (this *Rule) Apply(n int) string {
 	if n%this.Number == 0 {
 		return this.Word
 	}
