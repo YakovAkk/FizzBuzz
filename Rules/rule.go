@@ -1,17 +1,17 @@
-package rules
+package dividedrules
 
-type Rule struct {
+type DividedRule struct {
 	Word   string
 	Number int
 }
 
-func (this *Rule) Apply(n int) string {
+func (this *DividedRule) Apply(n int) string {
 	if n%this.Number == 0 {
 		return this.Word
 	}
 	return ""
 }
 
-func New(word string, num int) *Rule {
-	return &Rule{Word: word, Number: num}
+func New(word string, num int) *DividedRule {
+	return &DividedRule{Word: word, Number: num}
 }

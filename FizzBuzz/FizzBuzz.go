@@ -3,14 +3,14 @@ package fizzbuzz
 import (
 	"strconv"
 
-	"github.com/YakovAkk/FizzBuzz/rules"
+	ruleBase "github.com/YakovAkk/FizzBuzz/ruleBase"
 )
 
 type FizzBuzz struct {
-	Rules []rules.Rule
+	Rules []ruleBase.Rule
 }
 
-func New(rules []rules.Rule) *FizzBuzz {
+func New(rules []ruleBase.Rule) *FizzBuzz {
 	return &FizzBuzz{Rules: rules}
 }
 

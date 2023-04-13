@@ -4,16 +4,16 @@ import (
 	"fmt"
 
 	fizzbuzz "github.com/YakovAkk/FizzBuzz/FizzBuzz"
-	"github.com/YakovAkk/FizzBuzz/rules"
+	dividedrules "github.com/YakovAkk/FizzBuzz/dividedrules"
 )
 
 func main() {
 	var usersNum = 15
 
-	rule1 := rules.New("Fizz", 3)
-	rule2 := rules.New("Buzz", 5)
+	rule1 := dividedrules.New("Fizz", 3)
+	rule2 := dividedrules.New("Buzz", 5)
 
-	rules := []rules.Rule{*rule1, *rule2}
+	rules := []dividedrules.DividedRule{*rule1, *rule2}
 
 	fizzBuzz := fizzbuzz.New(rules)
 
