@@ -12,7 +12,7 @@ func New() *FizzBuzzService {
 	return &FizzBuzzService{}
 }
 
-func (this FizzBuzzService) Calculate(usersNum int, rules []fizzbuzz.Rule) {
+func (this *FizzBuzzService) Calculate(usersNum int, rules []fizzbuzz.Rule) {
 
 	fizzBuzz := fizzbuzz.New(rules)
 
