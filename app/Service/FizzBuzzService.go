@@ -1,8 +1,6 @@
 package service
 
 import (
-	"fmt"
-
 	fizzbuzz "github.com/YakovAkk/FizzBuzz/app/FizzBuzz"
 )
 
@@ -12,12 +10,14 @@ func New() *FizzBuzzService {
 	return &FizzBuzzService{}
 }
 
-func (this *FizzBuzzService) Calculate(usersNum int, rules []fizzbuzz.Rule) {
-
+func (this *FizzBuzzService) Calculate(usersNum int, rules []fizzbuzz.Rule) []string {
 	fizzBuzz := fizzbuzz.New(rules)
 
+	result := make([]string, usersNum)
+
 	for i := 1; i <= usersNum; i++ {
-		fmt.Print(fizzBuzz.Apply(i) + " ")
+		result[i-1] = fizzBuzz.Apply(i)
 	}
 
+	return result
 }
