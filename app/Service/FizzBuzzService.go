@@ -4,24 +4,19 @@ import (
 	"fmt"
 
 	fizzbuzz "github.com/YakovAkk/FizzBuzz/app/FizzBuzz"
-	rules "github.com/YakovAkk/FizzBuzz/app/Rules"
 )
 
-type FizzBuzzService struct{}
+ype FizzBuzzService struct{}
 
-func New() *FizzBuzzService {
+unc New() *FizzBuzzService {
 	return &FizzBuzzService{}
 }
 
-func (this FizzBuzzService) Calculate(usersNum int) {
-	rule1 := rules.New("Fizz", 3)
-	rule2 := rules.New("Buzz", 5)
+unc (this FizzBuzzService) Calculate(usersNum int, rules []fizzbuzz.Rule) {
 
-	rules := []fizzbuzz.Rule{rule1, rule2}
+	fizzBuzz := fizzbuzz.New(rule)
 
-	fizzBuzz := fizzbuzz.New(rules)
-
-	for i := 1; i <= usersNum; i++ {
+for i := 1; i <= usersNum; i++ {
 		fmt.Print(fizzBuzz.Apply(i) + " ")
-	}
 }
+
