@@ -8,7 +8,7 @@ func main() {
 
 	var usersNum = 100
 
-	service := service.New()
+	myService := service.FizzBuzzService{}
 
-	service.FizzBuzzService.calculate(usersNum)
+	myService.Calculate(usersNum)
 }
