@@ -6,17 +6,18 @@ import (
 	fizzbuzz "github.com/YakovAkk/FizzBuzz/app/FizzBuzz"
 )
 
-ype FizzBuzzService struct{}
+type FizzBuzzService struct{}
 
-unc New() *FizzBuzzService {
+func New() *FizzBuzzService {
 	return &FizzBuzzService{}
 }
 
-unc (this FizzBuzzService) Calculate(usersNum int, rules []fizzbuzz.Rule) {
+func (this FizzBuzzService) Calculate(usersNum int, rules []fizzbuzz.Rule) {
 
-	fizzBuzz := fizzbuzz.New(rule)
+	fizzBuzz := fizzbuzz.New(rules)
 
-for i := 1; i <= usersNum; i++ {
+	for i := 1; i <= usersNum; i++ {
 		fmt.Print(fizzBuzz.Apply(i) + " ")
-}
+	}
 
+}
