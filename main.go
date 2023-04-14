@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	var usersNum = 5
+	var usersNum = 15
 
 	myService := service.FizzBuzzService{}
 
