@@ -1,23 +1,14 @@
 package main
 
 import (
-	"fmt"
-
-	fizzbuzz "github.com/YakovAkk/FizzBuzz/app/FizzBuzz"
-	"github.com/YakovAkk/FizzBuzz/app/rules"
+	"github.com/YakovAkk/FizzBuzz/app/service"
 )
 
 func main() {
 
-	var usersNum = 15
-	rule1 := rules.New("Fizz", 3)
-	rule2 := rules.New("Buzz", 5)
+	var usersNum = 100
 
-	rules := []fizzbuzz.Rule{rule1, rule2}
+	service := service.New()
 
-	fizzBuzz := fizzbuzz.New(rules)
-
-	for i := 1; i <= usersNum; i++ {
-		fmt.Print(fizzBuzz.Apply(i) + " ")
-	}
+	service.FizzBuzzService.calculate(usersNum)
 }
